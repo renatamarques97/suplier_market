@@ -16,11 +16,12 @@ Rails.application.routes.draw do
     password:      'providers/passwords',
     registrations: 'providers/registrations'
   }
-
-  devise_for :adm, controllers: {
-    sessions:      'adm/sessions',
-    password:      'adm/passwords'
-  }
+  
+  # devise_for :adm, controllers: {
+  #   sessions:      'adm/sessions',
+  #   password:      'adm/passwords'
+  # }
 
   root to: "home#index"
+  get '/check_logged', to: 'home#check_logged'
 end
